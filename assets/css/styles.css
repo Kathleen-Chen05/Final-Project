@@ -1,5 +1,34 @@
 /* styles.css */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
 
-* {
-	font-family: Arial;
+.container {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+select, button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+#words {
+  margin-top: 20px;
+  font-size: 1.5rem;
 }
