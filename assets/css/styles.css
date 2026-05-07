@@ -1,23 +1,38 @@
-/* styles.css */
 body {
   margin: 0;
   height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   font-family: Arial, sans-serif;
+
+  background-image: url("../img/Mood.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: background-color 0.4s ease;
 }
 
 .container {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: clamp(2rem, 5vw, 5rem);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+h1:hover {
+  transform: scale(1.05);
+  letter-spacing: 3px;
+  color: #fff5c8;
 }
 
 select, button {
@@ -25,10 +40,24 @@ select, button {
   margin: 10px;
   font-size: 1rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+select:hover, button:hover {
+  transform: translateY(-2px);
 }
 
 #words {
   margin-top: 20px;
   font-size: 1.5rem;
+}
+
+.emoji {
+  position: fixed;
+  font-size: 3rem;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
 }
